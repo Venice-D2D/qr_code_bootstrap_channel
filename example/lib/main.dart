@@ -68,7 +68,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 onPressed: () {
                   channel.initReceiver();
                 },
-                child: const Text("Receive data metadata")
+                child: const Text("Receive metadata")
             )
           ],
         ),
