@@ -20,11 +20,11 @@ class QrCodeBootstrapChannel extends BootstrapChannel {
 
   @override
   Future<void> initReceiver() async {
-    showModalBottomSheet(context: context, builder: (BuildContext context) {
+    showModalBottomSheet(context: context, builder: (BuildContext cContext) {
       return DraggableScrollableSheet(
         initialChildSize: 1,
         maxChildSize: 1,
-        builder: (context, controller) {
+        builder: (dContext, controller) {
           return Container(
             color: Colors.red,
             child: MobileScanner(fit: BoxFit.fill, onDetect: (code, arguments) {
@@ -37,9 +37,11 @@ class QrCodeBootstrapChannel extends BootstrapChannel {
               
               if (words[0] == "c") {
                 ChannelMetadata data = ChannelMetadata(words[1], words[2], words[3], words[4]);
+                Navigator.of(context).pop();
                 on (BootstrapChannelEvent.channelMetadata, data);
               } else {
                 FileMetadata data = FileMetadata(words[1], int.parse(words[2]), int.parse(words[3]));
+                Navigator.of(context).pop();
                 on (BootstrapChannelEvent.fileMetadata, data);
               }
             }),
