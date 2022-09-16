@@ -1,4 +1,5 @@
 import 'package:channel_multiplexed_scheduler/channels/channel_metadata.dart';
+import 'package:channel_multiplexed_scheduler/channels/events/bootstrap_channel_event.dart';
 import 'package:channel_multiplexed_scheduler/file/file_metadata.dart';
 import 'package:flutter/material.dart';
 import 'package:qr_code_bootstrap_channel/qr_code_bootstrap_channel.dart';
@@ -37,6 +38,34 @@ class _MyHomePageState extends State<MyHomePage> {
     QrCodeBootstrapChannel channel = QrCodeBootstrapChannel(context);
     FileMetadata data = FileMetadata("testName", 42000, 10);
     ChannelMetadata cData = ChannelMetadata("wifi_channel", "address", "apIdentifier", "password");
+
+    channel.on = (BootstrapChannelEvent event, dynamic data) {
+      showDialog<void>(
+        context: context,
+        barrierDismissible: false,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            title: const Text('Data received!'),
+            content: SingleChildScrollView(
+              child: ListBody(
+                children: <Widget>[
+                  Text('Metadata type: ${event.name}'),
+                  Text('Metadata content: $data'),
+                ],
+              ),
+            ),
+            actions: <Widget>[
+              TextButton(
+                child: const Text('Ok'),
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+              ),
+            ],
+          );
+        },
+      );
+    };
 
     return Scaffold(
       appBar: AppBar(
