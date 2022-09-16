@@ -53,7 +53,7 @@ class QrCodeBootstrapChannel extends BootstrapChannel {
           Container(
             margin: const EdgeInsets.all(20),
             child: QrImage(
-              data: data.toString(),
+              data: "c;$data",
               version: QrVersions.auto
             ),
           )
@@ -74,7 +74,7 @@ class QrCodeBootstrapChannel extends BootstrapChannel {
           Container(
             margin: const EdgeInsets.all(20),
             child: QrImage(
-              data: data.toString(),
+              data: "f;$data",
               version: QrVersions.auto
             )
           )
