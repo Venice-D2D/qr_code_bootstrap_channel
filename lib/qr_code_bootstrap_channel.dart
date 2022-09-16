@@ -50,9 +50,12 @@ class QrCodeBootstrapChannel extends BootstrapChannel {
             margin: const EdgeInsets.only(top: 15, bottom: 20),
             child: const Text("Channel metadata", style: TextStyle(fontSize: 20)),
           ),
-          QrImage(
-            data: data.toString(),
-            version: QrVersions.auto
+          Container(
+            margin: const EdgeInsets.all(20),
+            child: QrImage(
+              data: data.toString(),
+              version: QrVersions.auto
+            ),
           )
         ],
       );
@@ -68,9 +71,12 @@ class QrCodeBootstrapChannel extends BootstrapChannel {
             margin: const EdgeInsets.only(top: 15, bottom: 20),
             child: const Text("File metadata", style: TextStyle(fontSize: 20)),
           ),
-          QrImage(
-            data: data.toString(),
-            version: QrVersions.auto
+          Container(
+            margin: const EdgeInsets.all(20),
+            child: QrImage(
+              data: data.toString(),
+              version: QrVersions.auto
+            )
           )
         ],
       );
