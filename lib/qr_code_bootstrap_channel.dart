@@ -70,6 +70,8 @@ class QrCodeBootstrapChannel extends BootstrapChannel {
         ],
       );
     });
+
+    await Future.delayed(const Duration(seconds: 2));
   }
 
   @override
@@ -91,6 +93,8 @@ class QrCodeBootstrapChannel extends BootstrapChannel {
         ],
       );
     });
+
+    await Future.delayed(const Duration(seconds: 2));
   }
 
 }
