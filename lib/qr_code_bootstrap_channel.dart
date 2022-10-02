@@ -32,11 +32,13 @@ class QrCodeBootstrapChannel extends BootstrapChannel {
               
               if (words[0] == "c") {
                 ChannelMetadata data = ChannelMetadata(words[1], words[2], words[3], words[4]);
+                // Note: if you have more than one data channel, you should
+                // remove this call, as it will close QR code scanner view.
                 Navigator.of(context).pop();
                 on (BootstrapChannelEvent.channelMetadata, data);
               } else {
                 FileMetadata data = FileMetadata(words[1], int.parse(words[2]), int.parse(words[3]));
-                Navigator.of(context).pop();
+                // Navigator.of(context).pop();
                 on (BootstrapChannelEvent.fileMetadata, data);
               }
             }),
