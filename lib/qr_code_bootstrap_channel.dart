@@ -74,6 +74,7 @@ class QrCodeBootstrapChannel extends BootstrapChannel {
     });
 
     await Future.delayed(const Duration(seconds: 2));
+    Navigator.of(context).pop();
   }
 
   @override
@@ -97,6 +98,7 @@ class QrCodeBootstrapChannel extends BootstrapChannel {
     });
 
     await Future.delayed(const Duration(seconds: 2));
+    Navigator.of(context).pop();
   }
 
 }
