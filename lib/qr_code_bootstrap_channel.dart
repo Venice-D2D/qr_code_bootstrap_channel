@@ -55,21 +55,17 @@ class QrCodeBootstrapChannel extends BootstrapChannel {
 
   @override
   Future<void> sendChannelMetadata(ChannelMetadata data) async {
-    showModalBottomSheet(context: context, builder: (BuildContext context) {
-      return Column(
-        children: [
-          Container(
-            margin: const EdgeInsets.only(top: 15, bottom: 20),
-            child: const Text("Channel metadata", style: TextStyle(fontSize: 20)),
-          ),
-          Container(
-            margin: const EdgeInsets.all(20),
-            child: QrImage(
-              data: "c;$data",
-              version: QrVersions.auto
-            ),
+    showDialog(context: context, builder: (BuildContext context) {
+      return AlertDialog(
+        title: const Text("Channel metadata"),
+        content: SizedBox(
+          width: 300,
+          height: 300,
+          child: QrImage(
+            data: "c;$data",
+            version: QrVersions.auto
           )
-        ],
+        ),
       );
     });
 
@@ -79,21 +75,17 @@ class QrCodeBootstrapChannel extends BootstrapChannel {
 
   @override
   Future<void> sendFileMetadata(FileMetadata data) async {
-    showModalBottomSheet(context: context, builder: (BuildContext context) {
-      return Column(
-        children: [
-          Container(
-            margin: const EdgeInsets.only(top: 15, bottom: 20),
-            child: const Text("File metadata", style: TextStyle(fontSize: 20)),
-          ),
-          Container(
-            margin: const EdgeInsets.all(20),
-            child: QrImage(
-              data: "f;$data",
-              version: QrVersions.auto
-            )
+    showDialog(context: context, builder: (BuildContext context) {
+      return AlertDialog(
+        title: const Text("File metadata"),
+        content: SizedBox(
+          width: 300,
+          height: 300,
+          child: QrImage(
+            data: "f;$data",
+            version: QrVersions.auto
           )
-        ],
+        ),
       );
     });
 
