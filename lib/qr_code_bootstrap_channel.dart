@@ -55,7 +55,11 @@ class QrCodeBootstrapChannel extends BootstrapChannel {
 
   @override
   Future<void> sendChannelMetadata(ChannelMetadata data) async {
+    BuildContext? dialogContext;
+
     showDialog(context: context, barrierDismissible: false, builder: (BuildContext context) {
+      dialogContext = context;
+
       return AlertDialog(
         title: const Text("Channel metadata"),
         content: SizedBox(
@@ -70,12 +74,16 @@ class QrCodeBootstrapChannel extends BootstrapChannel {
     });
 
     await Future.delayed(const Duration(seconds: 2));
-    Navigator.of(context).pop();
+    Navigator.of(dialogContext!).pop();
   }
 
   @override
   Future<void> sendFileMetadata(FileMetadata data) async {
+    BuildContext? dialogContext;
+
     showDialog(context: context, barrierDismissible: false, builder: (BuildContext context) {
+      dialogContext = context;
+
       return AlertDialog(
         title: const Text("File metadata"),
         content: SizedBox(
@@ -90,7 +98,7 @@ class QrCodeBootstrapChannel extends BootstrapChannel {
     });
 
     await Future.delayed(const Duration(seconds: 2));
-    Navigator.of(context).pop();
+    Navigator.of(dialogContext!).pop();
   }
 
 }
