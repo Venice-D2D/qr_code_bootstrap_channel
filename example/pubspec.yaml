@@ -32,7 +32,7 @@ dependencies:
   qr_code_bootstrap_channel:
     path: ../
   venice_core:
-    path: ../../venice_core
+    git: https://github.com/Venice-D2D/venice_core.git
 
 
   # The following adds the Cupertino Icons font to your application.

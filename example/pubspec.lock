@@ -199,9 +199,11 @@ packages:
   venice_core:
     dependency: "direct main"
     description:
-      path: "../../venice_core"
-      relative: true
-    source: path
+      path: "."
+      ref: HEAD
+      resolved-ref: c39fb35e9eb351b585e992623e8b2ef31b1d5133
+      url: "https://github.com/Venice-D2D/venice_core.git"
+    source: git
     version: "1.0.0+1"
 sdks:
   dart: ">=2.18.2 <3.0.0"
