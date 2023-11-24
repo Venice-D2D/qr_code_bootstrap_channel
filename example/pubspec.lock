@@ -233,7 +233,7 @@ packages:
     description:
       path: "."
       ref: HEAD
-      resolved-ref: "9db0c901bf3e2f4ce8c0de33205a13adfdcae2c9"
+      resolved-ref: "226334f99fb547493d2443818dba6214cc43152c"
       url: "https://github.com/Venice-D2D/venice_core.git"
     source: git
     version: "1.0.0+1"
