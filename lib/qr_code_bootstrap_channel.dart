@@ -65,7 +65,7 @@ class QrCodeBootstrapChannel extends BootstrapChannel {
         content: SizedBox(
           width: 300,
           height: 300,
-          child: QrImage(
+          child: QrImageView(
             data: "c;$data",
             version: QrVersions.auto
           )
@@ -89,7 +89,7 @@ class QrCodeBootstrapChannel extends BootstrapChannel {
         content: SizedBox(
           width: 300,
           height: 300,
-          child: QrImage(
+          child: QrImageView(
             data: "f;$data",
             version: QrVersions.auto
           )
