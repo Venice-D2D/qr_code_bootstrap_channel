@@ -101,4 +101,9 @@ class QrCodeBootstrapChannel extends BootstrapChannel {
     Navigator.of(dialogContext!).pop();
   }
 
+  @override
+  Future<void> close() async {
+    // No resources to release here
+  }
+
 }
