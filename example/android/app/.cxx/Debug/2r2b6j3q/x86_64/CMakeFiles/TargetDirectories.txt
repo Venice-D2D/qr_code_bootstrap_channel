@@ -1,0 +1,2 @@
+E:/workspace/qr_code_bootstrap_channel/example/android/app/.cxx/Debug/2r2b6j3q/x86_64/CMakeFiles/edit_cache.dir
+E:/workspace/qr_code_bootstrap_channel/example/android/app/.cxx/Debug/2r2b6j3q/x86_64/CMakeFiles/rebuild_cache.dir

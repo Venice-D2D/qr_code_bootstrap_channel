@@ -22,8 +22,8 @@ class QrCodeBootstrapChannel extends BootstrapChannel {
         builder: (dContext, controller) {
           return Container(
             color: Colors.red,
-            child: MobileScanner(fit: BoxFit.fill, onDetect: (code, arguments) {
-              String value = code.rawValue!;
+            child: MobileScanner(fit: BoxFit.fill, onDetect: (code) {
+              String value = code.barcodes.first.rawValue!;
               List<String> words = value.split(";");
               
               if (!["c", "f"].contains(words[0])) {

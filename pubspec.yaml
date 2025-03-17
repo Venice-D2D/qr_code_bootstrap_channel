@@ -14,7 +14,7 @@ dependencies:
   venice_core:
     git: https://github.com/Venice-D2D/venice_core.git
   qr_flutter: ^4.1.0
-  mobile_scanner: ^2.0.0
+  mobile_scanner: ^6.0.7
 
 dev_dependencies:
   flutter_test:
