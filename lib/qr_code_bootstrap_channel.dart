@@ -49,7 +49,7 @@ class QrCodeBootstrapChannel extends BootstrapChannel {
   }
 
   @override
-  Future<void> initSender() async {
+  Future<void> initSender(FileMetadata fileData, ChannelMetadata channelData) async {
     // no need to initialize sender
   }
 
