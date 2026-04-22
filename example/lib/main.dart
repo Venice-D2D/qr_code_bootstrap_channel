@@ -37,7 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     QrCodeBootstrapChannel channel = QrCodeBootstrapChannel(context);
     FileMetadata data = FileMetadata("testName", 42000, 10);
-    ChannelMetadata cData = ChannelMetadata("wifi_channel", "address", "apIdentifier", "password");
+    ChannelMetadata cData = ChannelMetadata("wifi_channel", "address", "apIdentifier", "password", 4242);
 
     channel.on = (BootstrapChannelEvent event, dynamic data) {
       showDialog<void>(
