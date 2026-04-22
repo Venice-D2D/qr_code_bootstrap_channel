@@ -8,7 +8,7 @@
 PRODUCT_NAME = example
 
 // The application's bundle identifier
-PRODUCT_BUNDLE_IDENTIFIER = com.example.example
+PRODUCT_BUNDLE_IDENTIFIER = fr.inria.spirals.venice.qr_code_bootstrap_channel
 
 // The copyright displayed in application information
-PRODUCT_COPYRIGHT = Copyright © 2022 com.example. All rights reserved.
+PRODUCT_COPYRIGHT = Copyright © 2022 fr.inria. All rights reserved.
