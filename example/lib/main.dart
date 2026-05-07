@@ -1,3 +1,6 @@
+// Use `venice_core` dependency from main package
+// ignore_for_file: depend_on_referenced_packages
+
 import 'package:venice_core/metadata/channel_metadata.dart';
 import 'package:venice_core/channels/events/bootstrap_channel_event.dart';
 import 'package:venice_core/metadata/file_metadata.dart';

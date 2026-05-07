@@ -269,7 +269,7 @@ packages:
     source: hosted
     version: "2.2.0"
   venice_core:
-    dependency: "direct main"
+    dependency: transitive
     description:
       path: "."
       ref: HEAD

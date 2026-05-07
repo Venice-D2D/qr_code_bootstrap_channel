@@ -11,8 +11,6 @@ dependencies:
     sdk: flutter
   qr_code_bootstrap_channel:
     path: ../
-  venice_core:
-    git: https://github.com/Venice-D2D/venice_core.git
   cupertino_icons: ^1.0.2
 
 dev_dependencies:

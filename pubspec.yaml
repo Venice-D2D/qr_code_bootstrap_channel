@@ -5,14 +5,17 @@ homepage:
 publish_to: none
 
 environment:
-  sdk: ">=2.17.6 <3.0.0"
+  sdk: '>=3.9.0 <4.0.0'
   flutter: ">=1.17.0"
 
 dependencies:
   flutter:
     sdk: flutter
   venice_core:
-    git: https://github.com/Venice-D2D/venice_core.git
+    git:
+      url: https://github.com/Venice-D2D/venice_core.git
+      tag_pattern: v{{version}}
+    version: 0.0.1
   qr_flutter: ^4.1.0
   mobile_scanner: ^6.0.7
 
